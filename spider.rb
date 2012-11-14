@@ -16,9 +16,7 @@ class Spider
 	def run()
 		target_site = 'http://top.iqiyi.com/dianying.html'
 		Spidr.site(target_site) do |spider|
-			spider.every_url {
-				|url| get_link url
-			}
+			spider.every_url { |url| get_link url }
 		end
 	end
 end
